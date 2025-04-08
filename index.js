@@ -47,30 +47,29 @@ submittButton.addEventListener('click', (event) => {
     
     if(firstName){
         if(!nameRegex.test(firstName)){
-            console.log('Name must contain only alphabets');
+            errorMessages[0].classList.remove('d-none')
         }else{
-            console.log('Name is valid');
+            errorMessages[0].classList.add('d-none')
         }
     }else{
-        console.log('Please enter your first name');
-        
+        console.log('Please fill the firstName field');
     }
 
     if(lastName){
         if(!nameRegex.test(lastName)){
-            console.log('Last name must contain only alphabets');
+            errorMessages[1].classList.remove('d-none')
         }else{
-            console.log('Last name is valid');
+            errorMessages[1].classList.add('d-none')
         }
     }else{
-        console.log('Please enter your last name');
+        console.log('Please fill the lastName field');
     }
 
     if(email){
         if(!emailRegex.test(email)){
-            console.log('Invalid email address');
+            errorMessages[2].classList.remove('d-none')
         }else{
-            console.log('Email is valid');
+            errorMessages[2].classList.add('d-none')
         }
     }else{
         console.log('Please fill the email field');
@@ -79,11 +78,12 @@ submittButton.addEventListener('click', (event) => {
 
     if(password){
         if(!passwordRegex.test(password)){
-            console.log('Password must be at least 8 characters long and contain at least one letter and one number');
+            errorMessages[3].classList.remove('d-none')
         }else{
-            console.log('Password is valid');
+            errorMessages[3].classList.add('d-none')
         }
     }else{
         console.log('Please fill the password field');
+        
     }
 })
